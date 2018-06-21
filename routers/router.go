@@ -13,6 +13,11 @@ func init() {
 				&controllers.AccessLogController{},
 			),
 		),
+		beego.NSNamespace("/feedback",
+			beego.NSInclude(
+				&controllers.FeedbackController{},
+			),
+		),
 	)
 	beego.AddNamespace(ns)
 }
